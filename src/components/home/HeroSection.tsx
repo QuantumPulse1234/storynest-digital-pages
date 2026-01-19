@@ -21,12 +21,6 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
-              <Sparkles className="h-4 w-4 text-gold" />
-              <span className="text-sm font-medium text-secondary-foreground">
-                Interactive Fiction Experience
-              </span>
-            </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6">
               Interactive Storytelling{' '}

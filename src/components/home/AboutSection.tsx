@@ -30,7 +30,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-card">
+    <section id="about" className="py-20 lg:py-32 bg-background parchment-texture">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -60,7 +60,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group p-6 lg:p-8 bg-background rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              className="group p-6 lg:p-8 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <feature.icon className="h-7 w-7 text-primary" />
@@ -107,7 +107,7 @@ export function AboutSection() {
                   <Compass className="h-10 w-10 text-primary" />
                 </div>
                 <p className="font-display text-xl font-semibold text-foreground">
-                  Begin Your Adventure
+                  Interactive App Coming Soon
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
                   Choose your path wisely
