@@ -76,7 +76,7 @@ export function StoriesSection() {
                   >
                     <video
                       src={story.videoUrl}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-contain bg-ink/90"
                       autoPlay
                       muted
                       loop
