@@ -120,10 +120,6 @@ export default function StoryDetail() {
                   </div>
                 )}
 
-                <Button size="lg" className="font-semibold">
-                  <BookOpen className="mr-2 h-5 w-5" />
-                  Start Reading
-                </Button>
               </motion.div>
             </div>
           </div>

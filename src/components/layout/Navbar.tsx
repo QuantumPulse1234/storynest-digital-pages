@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import storynestLogo from '@/assets/storynest-logo.png';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -29,10 +30,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <BookOpen className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
-            <span className="font-display text-xl lg:text-2xl font-semibold text-foreground">
-              StoryNest<span className="text-primary"> Media</span>
-            </span>
+            <img 
+              src={storynestLogo} 
+              alt="StoryNest Media" 
+              className="h-12 w-auto transition-transform group-hover:scale-105" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

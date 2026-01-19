@@ -56,27 +56,6 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-border">
-              <div>
-                <p className="font-display text-2xl lg:text-3xl font-bold text-primary">
-                  3+
-                </p>
-                <p className="text-sm text-muted-foreground">Story Versions</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl lg:text-3xl font-bold text-primary">
-                  50+
-                </p>
-                <p className="text-sm text-muted-foreground">Unique Paths</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl lg:text-3xl font-bold text-primary">
-                  ∞
-                </p>
-                <p className="text-sm text-muted-foreground">Possibilities</p>
-              </div>
-            </div>
           </motion.div>
 
           {/* Book Illustration */}

@@ -100,7 +100,16 @@ export default function BlogPost() {
               transition={{ delay: 0.1 }}
               className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary"
               dangerouslySetInnerHTML={{
-                __html: post.content.replace(/\n/g, '<br />').replace(/^# (.+)/gm, '<h1>$1</h1>').replace(/^## (.+)/gm, '<h2>$1</h2>').replace(/^### (.+)/gm, '<h3>$1</h3>'),
+                __html: post.content
+                  .split('\n')
+                  .map(line => {
+                    if (line.startsWith('### ')) return `<h3>${line.slice(4)}</h3>`;
+                    if (line.startsWith('## ')) return `<h2>${line.slice(3)}</h2>`;
+                    if (line.startsWith('# ')) return `<h1>${line.slice(2)}</h1>`;
+                    if (line.trim() === '') return '<br />';
+                    return `<p>${line}</p>`;
+                  })
+                  .join(''),
               }}
             />
           </div>
