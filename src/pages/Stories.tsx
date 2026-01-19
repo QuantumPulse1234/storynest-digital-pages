@@ -19,6 +19,12 @@ const colorMap: Record<string, string> = {
   'Animated Version': 'from-gold/20 to-accent/30',
 };
 
+const videoMap: Record<string, string> = {
+  'Black Characters Version': 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-1.mp4',
+  'White Characters Version': 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-2.mp4',
+  'Animated Version': 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-3.mp4',
+};
+
 export default function StoriesPage() {
   const { data: stories, isLoading } = useQuery({
     queryKey: ['stories'],
@@ -71,19 +77,28 @@ export default function StoriesPage() {
                     >
                       <Link to={`/stories/${story.slug}`} className="block group">
                         <div className="book-cover">
-                          <div className={`aspect-[3/4] bg-gradient-to-br ${color} p-6 flex flex-col justify-between relative`}>
+                          <div className={`aspect-[3/4] bg-gradient-to-br ${color} relative overflow-hidden`}>
+                            <video
+                              src={videoMap[story.version_type]}
+                              className="absolute inset-0 w-full h-full object-contain bg-ink/90"
+                              autoPlay
+                              muted
+                              loop
+                              playsInline
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
                             <div className="absolute top-0 right-0 w-16 h-16 bg-gold/20 rounded-bl-3xl" />
-                            <div className="w-12 h-12 rounded-lg bg-background/80 flex items-center justify-center">
+                            <div className="absolute top-6 left-6 w-12 h-12 rounded-lg bg-background/80 flex items-center justify-center">
                               <Icon className="h-6 w-6 text-primary" />
                             </div>
-                            <div className="mt-auto">
+                            <div className="absolute bottom-6 left-6 right-6">
                               <span className="inline-block px-3 py-1 bg-background/80 rounded-full text-xs font-medium mb-3">
                                 {story.version_type}
                               </span>
-                              <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                              <h3 className="font-display text-xl font-bold text-white mb-2">
                                 {story.title}
                               </h3>
-                              <p className="text-sm text-muted-foreground line-clamp-2">
+                              <p className="text-sm text-white/80 line-clamp-2">
                                 {story.description}
                               </p>
                             </div>

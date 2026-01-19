@@ -33,7 +33,7 @@ export function Navbar() {
             <img 
               src={storynestLogo} 
               alt="StoryNest Media" 
-              className="h-12 w-auto transition-transform group-hover:scale-105" 
+              className="h-12 w-12 rounded-full object-cover transition-transform group-hover:scale-105" 
             />
           </Link>
 

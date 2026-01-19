@@ -1,12 +1,18 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, BookOpen, Check } from 'lucide-react';
+import { ArrowLeft, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { Skeleton } from '@/components/ui/skeleton';
+
+const videoMap: Record<string, string> = {
+  'Black Characters Version': 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-1.mp4',
+  'White Characters Version': 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-2.mp4',
+  'Animated Version': 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-3.mp4',
+};
 
 export default function StoryDetail() {
   const { slug } = useParams();
@@ -75,16 +81,17 @@ export default function StoryDetail() {
                 animate={{ opacity: 1, x: 0 }}
                 className="book-cover max-w-md mx-auto lg:mx-0"
               >
-                <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-burgundy/30 p-8 flex flex-col justify-center items-center relative">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gold/20 rounded-bl-3xl" />
-                  <BookOpen className="h-16 w-16 text-primary mb-6" />
-                  <h2 className="font-display text-2xl font-bold text-foreground text-center">
-                    {story.title}
-                  </h2>
-                  <span className="mt-2 px-4 py-1 bg-background/80 rounded-full text-sm">
-                    {story.version_type}
-                  </span>
-                  <div className="absolute left-0 inset-y-0 w-4 bg-gradient-to-r from-ink/20 to-transparent" />
+                <div className="aspect-[3/4] bg-ink/90 relative overflow-hidden rounded-lg shadow-xl">
+                  <video
+                    src={videoMap[story.version_type]}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                  />
+                  <div className="absolute left-0 inset-y-0 w-4 bg-gradient-to-r from-ink/20 to-transparent pointer-events-none" />
                 </div>
               </motion.div>
 
