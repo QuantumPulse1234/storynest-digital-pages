@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, Sparkles } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import storynestLogo from '@/assets/storynest-logo.png';
 
 export function CTASection() {
   return (
@@ -27,7 +28,7 @@ export function CTASection() {
 
             <div className="relative z-10">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                <Sparkles className="h-8 w-8 text-primary" />
+                <img src={storynestLogo} alt="StoryNest Media" className="h-10 w-10 rounded-full object-cover" />
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
