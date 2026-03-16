@@ -12,7 +12,7 @@ const stories = [
       'Experience the powerful narrative with Black characters, exploring themes of family, identity, and reconciliation.',
     icon: Users,
     color: 'from-primary/20 to-burgundy/30',
-    videoUrl: 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-1.mp4',
+    videoUrl: 'https://ik.imagekit.io/goloiz0wp/dgipson-1%20(1).mp4?updatedAt=1773699467358',
   },
   {
     slug: 'sons-of-distant-fathers-white',
@@ -22,7 +22,7 @@ const stories = [
       'Experience the powerful narrative with White characters, exploring themes of family, identity, and reconciliation.',
     icon: Users,
     color: 'from-secondary to-sepia/30',
-    videoUrl: 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-2.mp4',
+    videoUrl: 'https://ik.imagekit.io/goloiz0wp/dgipson-2%20(1).mp4?tr=orig',
   },
   {
     slug: 'sons-of-distant-fathers-animated',
@@ -32,7 +32,7 @@ const stories = [
       'Experience the animated version with dynamic visuals and immersive storytelling that brings every scene to life.',
     icon: Play,
     color: 'from-gold/20 to-accent/30',
-    videoUrl: 'https://storynestmedia.org/wp-content/uploads/2025/08/dgipson-3.mp4',
+    videoUrl: 'https://ik.imagekit.io/goloiz0wp/dgipson-3%20(1).mp4',
   },
 ];
 
